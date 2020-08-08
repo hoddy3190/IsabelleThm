@@ -1,5 +1,21 @@
 theory Thm imports Main begin
 
-thm ssubst
-(* ?t = ?s ⟹ ?P ?s ⟹ ?P ?t *)
-
+thm conjI       (* ⟦?P; ?Q⟧ ⟹ ?P ∧ ?Q *)
+thm conjE       (* ⟦?P ∧ ?Q; ⟦?P; ?Q⟧ ⟹ ?R⟧ ⟹ ?R *)
+thm conjunct1   (* ?P ∧ ?Q ⟹ ?P *)
+thm conjunct2   (* ?P ∧ ?Q ⟹ ?Q *)
+thm disjI1      (* ?P ⟹ ?P ∨ ?Q *)
+thm disjI2      (* ?Q ⟹ ?P ∨ ?Q *)
+thm disjE       (* ⟦?P ∨ ?Q; ?P ⟹ ?R; ?Q ⟹ ?R⟧ ⟹ ?R *)
+thm impI        (* (?P ⟹ ?Q) ⟹ ?P ⟶ ?Q  usually with rule *)
+thm mp          (* ⟦?P ⟶ ?Q; ?P⟧ ⟹ ?Q  usually with drule *)
+thm iffI        (* ⟦?P ⟹ ?Q; ?Q ⟹ ?P⟧ ⟹ ?P = ?Q *)
+thm notI        (* (?P ⟹ False) ⟹ ¬ ?P *)
+thm notE        (* ⟦¬ ?P; ?P⟧ ⟹ ?R *)
+thm classical   (* (¬ ?P ⟹ ?P) ⟹ ?P  using with rule *)
+thm subst       (* ⟦?s = ?t; ?P ?s⟧ ⟹ ?P ?t *)
+thm ssubst      (* ⟦?t = ?s; ?P ?s⟧ ⟹ ?P ?t *)
+thm allI        (* (⋀x. ?P x) ⟹ ∀x. ?P x *)
+thm spec        (* ∀x. ?P x ⟹ ?P ?x  using with drule_tac *)
+thm exI         (* ?P ?x ⟹ ∃x. ?P x  using with rule_tac *)
+thm exE         (* ⟦∃x. ?P x; ⋀x. ?P x ⟹ ?Q⟧ ⟹ ?Q *)
