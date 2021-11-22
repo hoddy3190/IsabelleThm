@@ -6,7 +6,7 @@ thm conjunct1   (* ?P ∧ ?Q ⟹ ?P  usually using with drule, but sometimes wit
 thm conjunct2   (* ?P ∧ ?Q ⟹ ?Q   usually using with drule, but sometimes with erule*)
 thm disjI1      (* ?P ⟹ ?P ∨ ?Q *)
 thm disjI2      (* ?Q ⟹ ?P ∨ ?Q *)
-thm disjE       (* ⟦?P ∨ ?Q; ?P ⟹ ?R; ?Q ⟹ ?R⟧ ⟹ ?R *)
+thm disjE       (* ⟦?P ∨ ?Q; ?P ⟹ ?R; ?Q ⟹ ?R⟧ ⟹ ?R  always usable *)
 thm impI        (* (?P ⟹ ?Q) ⟹ ?P ⟶ ?Q  usually using with rule *)
 thm mp          (* ⟦?P ⟶ ?Q; ?P⟧ ⟹ ?Q  usually using with drule *)
 thm iffI        (* ⟦?P ⟹ ?Q; ?Q ⟹ ?P⟧ ⟹ ?P = ?Q *)
