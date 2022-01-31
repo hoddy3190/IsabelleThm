@@ -30,3 +30,9 @@ thm CollectD    (* ?a ∈ {x. ?P x} ⟹ ?P ?a *)
 thm UNIV_def    (* UNIV = {x. True} *)
 thm UNIV_I      (* ?x ∈ UNIV *)
 thm Pow_def     (* Pow ?A = {B. B ⊆ ?A} *)
+thm equalityI   (* ?A ⊆ ?B ⟹ ?B ⊆ ?A ⟹ ?A = ?B *)
+thm UnionI      (* ?X ∈ ?C ⟹ ?A ∈ ?X ⟹ ?A ∈ ⋃ ?C *)
+thm UnionE      (* ?A ∈ ⋃ ?C ⟹ (⋀X. ?A ∈ X ⟹ X ∈ ?C ⟹ ?R) ⟹ ?R *)
+
+
+
