@@ -25,14 +25,26 @@ thm insert_iff  (* (?a ∈ insert ?b ?A) = (?a = ?b ∨ ?a ∈ ?A) *)
 thm empty_iff   (* (?c ∈ {}) = False *)
 thm mem_Collect_eq  (* (?a ∈ Collect ?P) = ?P ?a  集合の記法{}を外すときに使う。Collect P は {x. P x} と同じ *)
 thm subsetI     (* (⋀x. x ∈ ?A ⟹ x ∈ ?B) ⟹ ?A ⊆ ?B  subsetの証明をする第一手目はこれ *)
-thm collectI    (* ?P ?a ⟹ ?a ∈ {x. ?P x} ruleでつかうことが多い。subst mem_Collect_eqでもよい *)
+thm CollectI    (* ?P ?a ⟹ ?a ∈ {x. ?P x} ruleでつかうことが多い。subst mem_Collect_eqでもよい *)
 thm CollectD    (* ?a ∈ {x. ?P x} ⟹ ?P ?a *)
 thm UNIV_def    (* UNIV = {x. True} *)
 thm UNIV_I      (* ?x ∈ UNIV *)
 thm Pow_def     (* Pow ?A = {B. B ⊆ ?A} *)
 thm equalityI   (* ?A ⊆ ?B ⟹ ?B ⊆ ?A ⟹ ?A = ?B *)
+
+
+thm ballI       (* (⋀x. x ∈ ?A ⟹ ?P x) ⟹ ∀x∈?A. ?P x *)
+thm bspec       (* ∀x∈?A. ?P x ⟹ ?x ∈ ?A ⟹ ?P ?x *)
+thm bexI        (* ?P ?x ⟹ ?x ∈ ?A ⟹ ∃x∈?A. ?P x *)
+thm bexE        (* ∃x∈?A. ?P x ⟹ (⋀x. x ∈ ?A ⟹ ?P x ⟹ ?Q) ⟹ ?Q *)
+
 thm UnionI      (* ?X ∈ ?C ⟹ ?A ∈ ?X ⟹ ?A ∈ ⋃ ?C *)
 thm UnionE      (* ?A ∈ ⋃ ?C ⟹ (⋀X. ?A ∈ X ⟹ X ∈ ?C ⟹ ?R) ⟹ ?R *)
+thm InterI      (* (⋀X. X ∈ ?C ⟹ ?A ∈ X) ⟹ ?A ∈ ⋂ ?C *)
+thm InterD      (* ?A ∈ ⋂ ?C ⟹ ?X ∈ ?C ⟹ ?A ∈ ?X *)
+thm UN_I        (* ?a ∈ ?A ⟹ ?b ∈ ?B ?a ⟹ ?b ∈ ⋃ (?B ` ?A) *)
+thm UN_E        (* ?b ∈ ⋃ (?B ` ?A) ⟹ (⋀x. x ∈ ?A ⟹ ?b ∈ ?B x ⟹ ?R) ⟹ ?R *)
+thm INT_I       (* (⋀x. x ∈ ?A ⟹ ?b ∈ ?B x) ⟹ ?b ∈ ⋂ (?B ` ?A) *)
+thm INT_D       (* ?b ∈ ⋂ (?B ` ?A) ⟹ ?a ∈ ?A ⟹ ?b ∈ ?B ?a *)
 
-
-
+thm image_def   (* ?f ` ?A = {y. ∃x∈?A. y = ?f x} *)
