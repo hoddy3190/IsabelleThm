@@ -48,3 +48,18 @@ thm INT_I       (* (⋀x. x ∈ ?A ⟹ ?b ∈ ?B x) ⟹ ?b ∈ ⋂ (?B ` ?A) *)
 thm INT_D       (* ?b ∈ ⋂ (?B ` ?A) ⟹ ?a ∈ ?A ⟹ ?b ∈ ?B ?a *)
 
 thm image_def   (* ?f ` ?A = {y. ∃x∈?A. y = ?f x} *)
+thm fun_upd_def (* ?f(?a := ?b) = (λx. if x = ?a then ?b else ?f x) *)
+thm ext         (* (⋀x. ?f x = ?g x) ⟹ ?f = ?g  外延性の公理 *)
+thm o_def       (* ?f ∘ ?g = (λx. ?f (?g x)) *)
+thm image_def   (* ?f ` ?A = {y. ∃x∈?A. y = ?f x} *)
+thm vimage_def  (* ?f -` ?B ≡ {x. ?f x ∈ ?B} *)
+thm inj_on_def  (* inj_on ?f ?A = (∀x∈?A. ∀y∈?A. ?f x = ?f y ⟶ x = y) *)
+thm surj_def    (* surj ?f = (∀y. ∃x. y = ?f x) *)
+thm bij_def     (* bij ?f = (inj ?f ∧ surj ?f) *)
+
+
+
+
+
+
+
