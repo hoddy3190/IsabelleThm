@@ -58,7 +58,12 @@ thm inj_on_def  (* inj_on ?f ?A = (∀x∈?A. ∀y∈?A. ?f x = ?f y ⟶ x = y) 
 thm surj_def    (* surj ?f = (∀y. ∃x. y = ?f x) *)
 thm bij_def     (* bij ?f = (inj ?f ∧ surj ?f) *)
 
-
+thm (?a, ?b) ∈ ?r⇧* ⟹ ?P ?a ⟹ (⋀y z. (?a, y) ∈ ?r⇧* ⟹ (y, z) ∈ ?r ⟹ ?P y ⟹ ?P z) ⟹ ?P ?b
+thm relcomp_unfold  (* ?r O ?s = {(x, z). ∃y. (x, y) ∈ ?r ∧ (y, z) ∈ ?s} *)
+thm rtrancl_refl  (* (?a, ?a) ∈ ?r⇧* *)
+thm rtrancl_trans  (* (?x, ?y) ∈ ?r⇧* ⟹ (?y, ?z) ∈ ?r⇧* ⟹ (?x, ?z) ∈ ?r⇧* *)
+thm converseD  (* (?a, ?b) ∈ ?r¯ ⟹ (?b, ?a) ∈ ?r *)
+thm r_into_rtrancl  (* ?p ∈ ?r ⟹ ?p ∈ ?r⇧* *)
 
 
 
